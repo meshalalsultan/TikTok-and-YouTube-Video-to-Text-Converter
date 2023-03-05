@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Video to Text Result</title>
+  </head>
+  <body>
+    <h1>Video to Text Result</h1>
+    {% if text %}
+      <pre>{{ text }}</pre>
+    {% else %}
+      <p>Error extracting text from video.</p>
+    {% endif %}
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Download YouTube Videos</title>
+  </head>
+  <body>
+    <h1>Download YouTube Videos</h1>
+    <form method="POST" action="{{ url_for('download_youtube') }}">
+      <input type="text" name="url" placeholder="YouTube video URL">
+      <button type="submit">Download</button>
+    </form>
+  </body>
+</html>

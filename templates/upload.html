@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Upload Video</title>
+</head>
+<body>
+	<h1>Upload Video</h1>
+	<form action="{{ url_for('upload_video') }}" method="POST" enctype="multipart/form-data">
+		<label for="video_file">Choose a video file to upload:</label><br>
+		<input type="file" id="video_file" name="file"><br><br>
+		<input type="submit" value="Upload">
+	</form>
+</body>
+</html>
