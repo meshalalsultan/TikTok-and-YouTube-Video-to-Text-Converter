@@ -1,39 +1,35 @@
-TikTok and YouTube Video to Text Converter
-This is a Flask app that converts TikTok and YouTube videos to text using Python libraries like youtube_dl and tiktokapi.
+This is a Flask web application that allows you to extract text from a YouTube video or an uploaded video file.
 
+Requirements
+Python 3.x
+Flask
+youtube-dl
+moviepy
+speechrecognition
 Installation
-Clone the repository:
-bash
-Copy code
-git clone https://github.com/username/repo.git
-Create a virtual environment and activate it:
-bash
-Copy code
-cd repo
-python3 -m venv env
-source env/bin/activate
-Install the required packages:
-Copy code
-pip install -r requirements.txt
-Create a config.py file with the following contents:
-python
-Copy code
-TIKTOK_API_KEY = '<your_tiktok_api_key>'
-You can obtain a TikTok API key by signing up at https://www.tiktok.com/login/.
-
-Start the Flask app:
-javascript
-Copy code
-export FLASK_APP=app.py
-export FLASK_ENV=development
-flask run
-Open http://localhost:5000 in a web browser to access the app.
+Clone the repository: git clone https://github.com/your_username/video-to-text.git
+Move to the project directory: cd video-to-text
+Create a virtual environment: python -m venv venv
+Activate the virtual environment: source venv/bin/activate (on Windows: venv\Scripts\activate)
+Install the dependencies: pip install -r requirements.txt
+Run the Flask app: python app.py
+Go to http://localhost:5000 in your web browser.
 Usage
-Enter the URL of a TikTok or YouTube video in the input field and click the "Convert to Text" button.
-Wait for the app to process the video and convert it to text. The resulting text will be displayed on the screen.
-To upload a video from your machine, click the "Upload Video" button and select the file to upload.
-Wait for the app to process the video and convert it to text. The resulting text will be displayed on the screen.
+Extract text from a YouTube video
+Copy the URL of the YouTube video you want to extract the text from.
+Paste the URL in the input field in the home page of the web app.
+Click on the "Get Text" button.
+Wait for the app to extract the text from the video.
+The text will be displayed on the page.
+Extract text from an uploaded video file
+Click on the "Upload Video" button in the home page of the web app.
+Select the video file you want to upload.
+Click on the "Upload" button.
+Wait for the app to extract the text from the video.
+The text will be displayed on the page.
 Troubleshooting
-If you encounter issues with the TikTok API, make sure that your API key is valid and that you have entered it correctly in the config.py file.
-If you encounter issues with youtube_dl, make sure that you have installed the latest version of the library and that you are using the --verbose flag to include its complete output.
-If you encounter any other issues, please create a new issue in the repository and include as much information as possible about the error message and the steps you took to reproduce the issue.
+If you encounter an error related to youtube-dl or moviepy, try updating them to the latest version: pip install --upgrade youtube-dl moviepy
+If you encounter an error related to speechrecognition, try installing the following dependencies:
+For Linux: sudo apt-get install python3-pyaudio portaudio19-dev
+For macOS: brew install portaudio && pip install pyaudio
+For Windows: download and install the PyAudio wheel from https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio
