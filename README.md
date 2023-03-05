@@ -1,5 +1,3 @@
-# TikTok and YouTube Video to Text Converter
- 
 TikTok and YouTube Video to Text Converter
 This is a Flask app that converts TikTok and YouTube videos to text using Python libraries like youtube_dl and tiktokapi.
 
