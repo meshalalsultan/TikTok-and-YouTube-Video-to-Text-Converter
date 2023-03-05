@@ -1,41 +1,68 @@
 # TikTok and YouTube Video to Text Converter
  
-TikTok and YouTube Video to Text Converter
-This is a Flask app that converts TikTok and YouTube videos to text using Python libraries like youtube_dl and tiktokapi.
+# Video to Text Flask App
 
-Installation
-Clone the repository:
-bash
-Copy code
-git clone https://github.com/username/repo.git
-Create a virtual environment and activate it:
-bash
-Copy code
-cd repo
-python3 -m venv env
-source env/bin/activate
-Install the required packages:
-Copy code
+This Flask app allows users to extract text from a YouTube video or a video file uploaded from their machine.
+
+## Getting Started
+
+These instructions will guide you on how to set up and run the Flask app on your local machine.
+
+### Prerequisites
+
+- Python 3.6 or higher
+- pip package manager
+- virtualenv package (optional)
+
+### Installing
+
+1. Clone the repository to your local machine using the following command:
+
+git clone https://github.com/meshalalsultan/TikTok-and-YouTube-Video-to-Text-Converter
+
+
+2. Navigate to the project directory:
+
+cd video-to-text-flask-app
+
+
+3. Create a virtual environment (optional):
+
+virtualenv venv
+source venv/bin/activate
+
+
+4. Install the required packages:
+
 pip install -r requirements.txt
-Create a config.py file with the following contents:
-python
-Copy code
-TIKTOK_API_KEY = '<your_tiktok_api_key>'
-You can obtain a TikTok API key by signing up at https://www.tiktok.com/login/.
 
-Start the Flask app:
-javascript
-Copy code
-export FLASK_APP=app.py
-export FLASK_ENV=development
+
+### Running the App
+
+1. Start the Flask app:
+
 flask run
-Open http://localhost:5000 in a web browser to access the app.
-Usage
-Enter the URL of a TikTok or YouTube video in the input field and click the "Convert to Text" button.
-Wait for the app to process the video and convert it to text. The resulting text will be displayed on the screen.
-To upload a video from your machine, click the "Upload Video" button and select the file to upload.
-Wait for the app to process the video and convert it to text. The resulting text will be displayed on the screen.
-Troubleshooting
-If you encounter issues with the TikTok API, make sure that your API key is valid and that you have entered it correctly in the config.py file.
-If you encounter issues with youtube_dl, make sure that you have installed the latest version of the library and that you are using the --verbose flag to include its complete output.
-If you encounter any other issues, please create a new issue in the repository and include as much information as possible about the error message and the steps you took to reproduce the issue.
+
+
+2. Open your web browser and go to the following URL:
+
+http://localhost:5000
+
+
+The home page of the app should be displayed.
+
+3. To extract text from a YouTube video, enter the video URL in the text box on the home page and click the "Get Text" button.
+
+4. To extract text from a video file uploaded from your machine, click the "Upload Video" button on the home page and select the video file to upload. Once the upload is complete, click the "Get Text" button.
+
+5. The extracted text should be displayed on the next page.
+
+## Built With
+
+- Flask - Python web framework
+- youtube-dl - Command-line program to download videos from YouTube and other video sites
+- SpeechRecognition - Python library for performing speech recognition with support for several engines and APIs
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
